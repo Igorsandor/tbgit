@@ -10,19 +10,38 @@
 
 <body>
 <?php echo validation_errors(); ?>
-<div class="tblogocircle">
+<!-- <div class="tblogocircle">
 	<img src="<?php echo base_url('img/tblogocircle.png'); ?>">
 </div>
 
-
 <div class="fields">
-<form action="loginuser" method="get">
+<form action="">
 <input type="text" name="username" placeholder="Your username"> <br>
 <input type="password" name="password" placeholder="Your password"> <br>
 <input type="submit">
+</form>
+</div> -->
+
+
+<div class="container2">
+
+<div class="picdiv">
+<img src="<?php echo base_url('css/tblogocircle.png'); ?>" class="pic">
+</div>
+
+
+<div class="forms">
+<form action="loginuser" method="get">
+		<input type="text" name="username" placeholder="Your username"> <br>
+		<input type="password" name="password" placeholder="Your password"> <br>
+		<input type="submit">
+</form>
+</div>
+
+
+
 
 </div>
-</form>
 
 </body>
 </html>

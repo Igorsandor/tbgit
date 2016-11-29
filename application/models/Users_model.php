@@ -4,6 +4,33 @@ class Users_model extends CI_Model{
 
 	var $userdetails;
 	var $rowarray;
+	/*
+	public function get_something($userlogin)
+	{
+		$query = sprintf('SELECT firstname,lastname,email, password 
+				FROM users 
+				WHERE name = "%s" '
+				, $userlogin);
+
+		$result = $this->db->query($query);
+		return $result->row();
+	} 
+	*/
+
+	/*public function get_schedules(){
+		$query = $this->db->query('SELECT * FROM schedule');
+		if($query->result() !== null){
+			echo 'its null';
+			return $query->result();
+		}
+		return $query->result();
+		
+	}*/
+
+	/*public function get_schedules(){
+		$query = $this->db->get('schedule');
+		return $query->result();
+	}*/
 
 
 	public function set_user($userdata){
@@ -111,6 +138,9 @@ class Users_model extends CI_Model{
 
 
 
+
+		
+
 		//spcific users id
 		public function get_schedules($id){
 		$query = sprintf('SELECT * FROM schedule
@@ -127,6 +157,7 @@ class Users_model extends CI_Model{
 
 		}
 
+
 		public function get_news(){
 		$query = sprintf('SELECT * FROM news
 				');
@@ -142,6 +173,8 @@ class Users_model extends CI_Model{
 			//}
 
 		}
+
+
 
 
 

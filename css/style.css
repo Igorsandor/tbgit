@@ -3,7 +3,14 @@ body {
 	background-image: url("background.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
+	height:100%;
+ /*margin-bottom: 60px;*/
 	
+}
+
+@font-face {
+    font-family: tinderbox;
+    src: url(EvelethW01-CleanRegular.ttf);
 }
 
 .cleaner {
@@ -32,37 +39,7 @@ header {
 	float: right;
 }
 
-.userpanel {
-	width: 100%;
-	height: 8vh;
-	background-color: grey;
-}
 
-.userpanelleft{
-	width: 30%;
-	height: 8vh;
-	float: left;
-}
-
-.userpanelright {
-	width: 30%;
-	height: 8vh;
-	float: right;
-	background-color: green;
-}
-
-.shiftinfo {
-	width: 80vw;
-	height: 45vh;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 50%;
-	margin-top: 3vh;
-	background-image: url("kitchen.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%;
-}
 
 .shiftdescription {
 	width: 80%;
@@ -70,6 +47,7 @@ header {
 	margin-left: auto;
 	margin-right: auto; 
 	margin-top: 3vh;
+	font-family: tinderbox;
 }
 
 .shiftdescriptiontext {
@@ -90,7 +68,7 @@ header {
 footer {
 	position: relative;
 	width: 100%;
-	background-color: black;
+	/*background-color: black;*/
 	height: 8vh;
 	margin-top: 3vh;
 }
@@ -103,7 +81,7 @@ footer {
     transform: translate(-50%, -50%);
 	width: 70%;
 	height: 5vh;
-	background-color: orange;
+	/*background-color: orange;*/
 }
 
 .tblogocircle {
@@ -128,6 +106,7 @@ footer {
 	height: 20vh;
 	margin-left: auto;
 	margin-right: auto;
+	/*background-color: purple;*/
 	margin-top: 3vh;
 }
 
@@ -135,23 +114,269 @@ footer {
 	text-align: center;
 	font-size: 1.5em;
 	color: black;
+	/*margin: 20px 0; */
+}
 
+
+/*     ||||||||||||||||||||  |||||||||||||||||||||  \\\\               |||                \                ///////||||||||||||||            ||||     */                                          
+/*     ||||||||||||||||||||  |||||||||||||||||||||  |\\\\              |||               /\\               ///////||||||||||||||            ||||     */                                            
+/*     |||||           ||||  ||||             ||||  ||\\\\             |||              //\\\              \\\\\\\                          ||||     */                         
+/*     |||||           ||||  ||||             ||||  |||\\\\            |||             ///\\\\              \\\\\\                          ||||     */                        
+/*     |||||           ||||  ||||             ||||  ||| \\\\           |||            //// \\\\              \\\\\\                         ||||     */                          
+/*     |||||           ||||  ||||             ||||  |||  \\\\          |||           ////   \\\\              \\\\\\                        ||||     */                           
+/*     |||||           ||||  ||||             ||||  |||   \\\\         |||          ////     \\\\               \\\\\\                      ||||     */                              
+/*     ||||||||||||||||||||  ||||             ||||  |||    \\\\        |||         ////       \\\\                \\\\\\                    ||||     */                                                        
+/*     ||||||||||||||||||||  ||||             ||||  |||     \\\\       |||        ////=========\\\\                 \\\\\\                  ||||     */                                                          
+/*     |||||                 ||||             ||||  |||      \\\\      |||       ////===========\\\\                 \\\\\\                 ||||     */                                           
+/*     |||||                 ||||             ||||  |||       \\\\     |||      ////=============\\\\                 \\\\\\                ||||     */                                             
+/*     |||||                 ||||             ||||  |||        \\\\    |||     ////               \\\\                  \\\\\\                       */                                           
+/*     |||||                 ||||             ||||  |||         \\\\   |||    ////                 \\\\                  \\\\\\                      */                                            
+/*     |||||                 ||||             ||||  |||          \\\\  |||   ////                   \\\\                  \\\\\\                     */                                              
+/*     |||||                 |||||||||||||||||||||  |||           \\\\ |||  ////                     \\\\  |||||||||||||||//////            ||||     */                                                   
+/*     |||||                 |||||||||||||||||||||  |||            \\\\||| ////                       \\\\ ||||||||||||||||////             ||||     */                                          
+
+
+/*Ponas*/
+.userpanel {
+	width: 100%;
+	/*height: 50px;*/
+	background-color: grey;
+}
+
+.userpanelleft{
+	width: 30%;
+	/*height: 50px;*/
+	float: left;
+	background-color: blue;
+}
+
+.userpanelright {
+	width: 30%;
+/*	height: 50px;*/
+	float: right;
+	background-color: green;
+	font-family: tinderbox;
+}
+
+
+.shiftinfo {
+	width: 80vw;
+	height: 45vh;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	margin-top: 3vh;
+	background-image: url("kitchen.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 70%;
+	background-color: white;
+}
+/* / */
+
+
+/*Wrong way*/
+.myfooter {
+	margin-top: 40vw;
+	background-color: #0a3a46;
+	opacity: 0.8;
+	border-top: #F18879 5px solid !important;
+/*position: absolute;
+  bottom: 0;
+  width: 100%;
+   Set the fixed height of the footer here 
+  height: 60px;*/
+}
+
+
+img.tinderlogo {
+	width: 60vw;
+}
+
+
+.headerleft {
+	text-align: center;
+}
+
+
+
+.mybuttondiv {
+	text-align: center;
+}
+
+.mybutton {
+	color: red;
+	padding-bottom: 10px;
+}
+
+
+a .mybutton {
+	color: red;
+	padding-bottom: 10px;
+}
+
+
+nav {
+	width: 100%;
+	text-align: center;
+	border-bottom: 4px solid #021f26;
+	margin-top: 2vw;
+}
+
+li {
+	display: inline-block;
+}
+
+.abuttonselected {
+	color: #FFF9F4 !important;
+}
+
+.swipenavbutton {
+	width: 32%;
+}
+
+.swipenavbutton2 {
+	border-right: solid 4px #021f26;
+	border-left: solid 4px #021f26;
+}
+
+.attentionimg {
+	width: 30px;
+}
+
+.abutton {
+	/*color: #3072a9;*/
+	color: #FFD962;
+	font-size: 20px;
+}
+
+
+.abutton:hover {
+	color: #F18879 !important;
+}
+
+.container2 {
+	width: 100%;
+	height: 100%;
+}
+
+.picdiv {
+	width: 90%;
+	margin-left: auto;
+}
+
+.pic {
+	margin-top: 5vh;
+	width: 90%;
+}
+
+div .forms2 {
+	margin-left: 5%;
+}
+
+.forms2 input {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 3vh;
+	width: 85vw;
+	height: 15vw;
+	font-family: tinderbox;
+}
+
+.admindiv {
+	text-align: center;
+}
+
+.admin {
+	font-size: 8vw;
+	color: black;
 }
 
 
 
 
+.picdiv {
+	width: 90%;
+	margin-left: auto;
+}
+
+.pic {
+	margin-top: 5vh;
+	width: 90%;
+}
+
+div .forms {
+	margin-left: 5%;
+}
+
+.forms input {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5vh;
+	width: 85vw;
+	height: 15vw;
+	font-family: tinderbox;
+}
+
+.schedulewrap {
+	font-color: black;
+}
+
+.containerfordata {
+	border: 1px solid #FFF9F4;
+	padding: 10px;
+	-webkit-box-shadow: 9px 10px 54px -1px rgba(0,0,0,0.47);
+    -moz-box-shadow: 9px 10px 54px -1px rgba(0,0,0,0.47);
+    box-shadow: 9px 10px 54px -1px rgba(0,0,0,0.47);
+}
+
+.taskdescription {
+	color: #8BC7B9;
+}
+
+.headline {
+	color: #F18879;
+}
+
+.timespan {
+	color: #F18879 !important;
+	color: black;
+}
+
+.usernamedisplay {
+	color: white;
+	padding-top: 5px;
+	padding-left: 50%;
+}
+
+.logoutbutton {
+	font-size: 12px;
+	color: #F18879;
+}
+
+.contactbutton {
+	/*color: #a84450;*/
+	color: #F18879;
+	text-decoration: underline;
+	font-family: tinderbox;
+	/*text-shadow: 5px 5px black;*/
+}
+
+.contactbutton:hover {
+	color: #FFD962 !important;
+}
 
 
 
+.sudiv {
+	text-align: center;
+	margin-top: 200px;
+}
 
-
-
-
-
-
-
-
+.sutext {
+	color: red;
+	font-size: 30px;
+}
 
 
 
