@@ -60,33 +60,6 @@ class User extends CI_Controller{
 		]);
 	} */
 
-	public function fpage(){
-		$this->load->view('index_view');
-	}
-
-	public function rpage(){
-		$this->load->view('register_view');
-	}
-
-
-	public function apage(){
-		$this->load->view('adminlogin_view');
-	}
-
-
-	public function lpage(){
-		$this->load->view('login_view');
-	}
-
-	public function spage(){
-		$this->load->view('schedule_view');
-	}
-
-	public function supage(){
-		$this->load->view('supervisor_view');
-	}
-
-
 
 
 	public function userinfo(){
@@ -280,8 +253,6 @@ class User extends CI_Controller{
 	//}
 
 
-
-
 	public function schedule(){
 		$this->load->helper('url'); 
 		$this->load->library('session');
@@ -310,8 +281,6 @@ class User extends CI_Controller{
        // }
 	}
 
-
-
 	public function news(){
 		$this->load->helper('url'); 
 		$this->load->library('session');
@@ -329,11 +298,7 @@ class User extends CI_Controller{
         //} else{
         //	echo 'session was not set';
         //}
-	}
-
-
-
-
+	}		
 
 	public function index(){
 		$this->load->helper('url'); 
@@ -343,6 +308,7 @@ class User extends CI_Controller{
 		//if( $this->session->userdata('logged_in') === true) {
         	$this->session_check();
             echo 'session value logged_in was set to true';
+            
             $this->load->view('index_view');
         //} else{
         //	echo 'session was not set';
@@ -362,7 +328,15 @@ public function log_out(){
 		
 
 public function form_check(){
-	echo 'Checking login form';
+		
+	$this->load->library("form_validation");
+
+	$this->form_validation->set_rules('password', 'Password', 'required|min_length[3]');
+	$this->form_validation->set_rules('username', 'Username', 'required|min_length[3]');
+
+		if($this->form_validation->run() === true){
+			return true;
+		}
 
 }		
 
@@ -381,7 +355,6 @@ public function loginuser(){
 	$userexsists = $this->users_model->user_login($username, $password);
 
 
-
     if($userexsists === true){
         
         $this->load->library('session');
@@ -393,7 +366,6 @@ public function loginuser(){
 			$this->load->view('index_view', $data);
     	}
     } else {                            
-        
         $this->load->view('login_view');
     }
 }
