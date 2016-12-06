@@ -1,0 +1,11 @@
+name: Drupal
+type: theme
+description: Drupal fucking 8
+package: Custom
+core: 8.x
+libraries:
+  - drupal/style
+region:
+  myheader: My Header
+  content: Content
+  slider: Slider
