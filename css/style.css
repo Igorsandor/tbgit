@@ -8,6 +8,14 @@ body {
 	
 }
 
+span, td, tr, p, h1{
+	color: red;
+}
+
+.h1h1{
+	color: red;
+}
+
 @font-face {
     font-family: tinderbox;
     src: url(EvelethW01-CleanRegular.ttf);
@@ -381,3 +389,10 @@ div .forms {
 
 
 
+
+
+
+
+.mypagebutton {
+	margin-top: 100px;
+}

@@ -45,6 +45,155 @@ class User extends CI_Controller{
 	}
 
 
+
+
+
+	public function testpage(){
+		$this->load->model('users_model');
+        $data['data'] = $this->users_model->getuser();    
+		$this->load->view('usertable_view',$data);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function mypage(){
+            $this->load->model('users_model');
+            $data['data'] = $this->users_model->getuser();           
+            $this->load->view('my_view',$data);
+
+	}
+
+
+
+/*	public function mypage(){
+		$this->load->view('my_view');
+	}
+*/
+	public function hello () {
+		$fullname = $this->input->post('fullname');
+		echo 'Hello '.$fullname;
+	}
+
+	public function sum () {
+		$number1 = $this->input->post('number1');
+		$number2 = $this->input->post('number2');
+		echo $number1 + $number2;
+	}
+
+
+
+
+	public function add_userrr()
+	{
+
+			$firstname = $this->input->post('firstname');
+			$lastname = $this->input->post('lastname');
+
+			$data = array('firstname' =>$firstname, 'lastname'=>$lastname);
+
+			$this->load->model('Users_model');
+			if($this->Users_model->add($data))
+				{
+					header("Location: " . "http://opbwu16eintg7.my.eal.dk/tinderboxCI/User/mypage");
+					/*$this->get_user();*/
+				}
+				else
+				{
+					echo "Data Not Inserted";
+				}
+	}
+
+
+	public function delete()
+	{
+		$this->load->model('Users_model');
+
+		$id = $this->input->get('id');
+
+		if($this->Users_model->deleteuser($id))
+		{
+			$data['data'] = $this->Users_model->getuser();
+			$this->load->view('my_view',$data);
+			header("Location: " . "http://opbwu16eintg7.my.eal.dk/tinderboxCI/User/mypage");
+		}
+	}
+	
+
+
+	public function edit()
+	{
+		$id = $this->input->get('id');
+		$this->load->model('Users_model');
+		$data['data'] = $this->Users_model->getuserbyid($id);           
+        $this->load->view('usertable_view',$data); /*kitas viewas*/
+	}
+
+
+
+	public function updateuser()
+	{
+		$firstname = $this->input->post('firstname');
+		$lastname = $this->input->post('lastname');
+		$id = $this->input->post('eid');
+		$data = array('firstname'=>$firstname, 'lastname'=>$lastname);
+
+		$this->load->model('Users_model');
+		if($this->Users_model->updateuserbyid($data,$id))
+		{
+
+            $data['data'] = $this->Users_model->getuser();           
+            $this->load->view('my_view',$data); /*kitas viewas*/
+            header("Location: " . "http://opbwu16eintg7.my.eal.dk/tinderboxCI/User/mypage");
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public function userinfo(){
 		$this->load->view('register_view');
 

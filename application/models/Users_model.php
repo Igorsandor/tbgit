@@ -174,4 +174,79 @@ class Users_model extends CI_Model{
 
 
 
+
+
+
+
+
+
+
+		public function add($data)
+		{
+
+			$query = sprintf('INSERT INTO userrr
+			(firstname, lastname)
+			VALUES
+			("%s","%s")'
+			, $data['firstname']
+			, $data['lastname']);
+
+			$this->db->query($query);
+			return $this->db->insert_id();
+
+			$this->load->database();
+
+			/*$count = $this->db->insert($data);
+			if($count>0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}*/
+		}
+
+
+		public function updateuserbyid($data,$id)
+		{
+			$this->load->database();
+			$this->db->where('id',$id);
+			$this->db->update('userrr',$data);
+			return true;
+		}
+
+
+		public function getuser()
+		{
+			$this->load->database();
+			$data = $this->db->get('userrr');
+			return $data->result();
+			return $this->db->get()->result_array();
+		}
+
+
+
+		function deleteuser($id)
+		{
+			$this->load->database();
+			$this->db->where('id',$id);
+			$this->db->delete('userrr');
+			return true;
+		}
+
+
+		public function getuserbyid($id)
+		{
+			$this->load->database();
+			$this->db->where('id',$id);
+			$data = $this->db->get('userrr');
+			return $data->result();
+		}
+
+
+
+
+
+
 	}
