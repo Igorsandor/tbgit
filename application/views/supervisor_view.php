@@ -41,40 +41,22 @@
 		</li>
 
 		<li class="swipenavbutton swipenavbutton3">
-			<a href="<?php echo site_url('user/news');?>" class="abutton abutton3 abuttonselected">News</a>
+			<a href="<?php echo site_url('user/news');?>" class="abutton abutton3">News</a>
 		</li>
 	</nav>
 </div>
 
 					<div class="cleaner"></div>
 
-		<div class="schedulewrap">
+<div class="col-xs-12">
+		<div class="sudiv">
+		<h1 class="sutext"> SUPERVISOR DOESN'T CARE</h1>
+		</div>
+</div>
 
-		<h1 class="headline">  </h1>
-
-		<div class="timespan"> </div>
-
-		<div class="taskdescription">  </div>
-		
-		<?php foreach($data as $row){?>
-			
-   			<div class="containerfordata">
-    		 <h1 class="headline"><b><?php echo $row->title;?> </b></h1></td>
-    		 <h5 class="timespan"><?php echo $row->timespan;?> </h5></td>
-   			 <h3 class="taskdescription"><?php echo $row->content;?> </h3></td>
-   			</div>
-  			
-  			</br>
-  			</br>
-  			</br>
-  			
- 		 <?php }?>
-
-	</div>
-
-<footer class="myfooter col-xs-12 navbar-fixed-bottom">
+<footer class="myfooter col-xs-12">
 		<div class="contactbutton">
-			<p class="contactsup"><a href="<?php echo site_url('user/supage');?>" class="abutton abutton2 contactbutton">Contact Supervisor</a></p>
+			<p class="contactsup"><a href="<?php echo site_url('user/schedule');?>" class="abutton abutton2 contactbutton">Contact Supervisor</a></p>
 		</div>
 	</footer>
 	

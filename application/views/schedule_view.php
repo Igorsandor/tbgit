@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,47 +11,56 @@
 
 <div class="container-fluid">
 	<header>
-		<div class="headerleft col-xs-4">
-			<img src="tblogo.png" alt="">
+		<div class="headerleft col-xs-12">
+		<a href="<?php echo site_url('user/adminlogin'); ?>" title="Website name"></a>
+
+		<img src="<?php echo base_url('img/tblogo.png'); ?>" alt="" class="tinderlogo">
+		</br >
+		<h5 class="usernamedisplay"><?php print_r($this->session->userdata('username')); ?>  <a href="<?php echo site_url('user/log_out');?>" class="abutton abutton3 logoutbutton">&nbsp;&nbsp;&nbsp;Log out</a></h5>
+			<!--<img src="tblogo.png" alt="">-->
+
+
 		</div>
 
 			<div class="col-xs-4"></div>
-
-		<div class="headerright col-xs-4">
-			
-				<div class="wrapper">
-		<nav>
-			<a class="menu-nav"></a>
-			<ul class="open">
-				<li><a href="">qqqqq</a></li>
-				<li><a href="">wwwww</a></li>
-				<li><a href="">eeeee</a></li>
-				<li><a href="">rrrrr</a></li>
-				<li><a href="">ttttt</a></li>
-			</ul>
-		</nav>
-	</div>
-		
-		</div>
 	</header>
 
 					<div class="cleaner"></div>
+	
+					<div class="cleaner"></div>
 
-	<div class="swipenav">
-		<div class="swipenavbutton">
-			<a href="#">Option 1</a>
-		</div>
 
-		<div class="swipenavbutton">
-			<a href="<?php echo site_url('user/index');?>">Index</a>
-		</div>
+<div class="shiftdescription col-xs-12">
+	<nav class="swipenav">
+		<li class="swipenavbutton swipenavbutton1">
+			<a href="<?php echo site_url('user/index'); ?>" class="abutton abutton1">Home</a>
+		</li>
 
-		<div class="swipenavbutton">
-			<a href="#">Option 3</a>
-		</div>
-	</div>      
+		<li class="swipenavbutton swipenavbutton2">
+			<a href="<?php echo site_url('user/schedule');?>" class="abutton abutton2 abuttonselected">Schedule</a>
+		</li>
 
-	<div class="schedulewrap">
+		<li class="swipenavbutton swipenavbutton3">
+			<a href="<?php echo site_url('user/news');?>" class="abutton abutton3">News</a>
+		</li>
+	</nav>
+</div>
+
+					<div class="cleaner"></div>
+
+	
+
+<!-- 	<div class="schedulewrap">
+
+		<h1 class="headline"> <?php echo $data['title'] ?>    </h1>
+
+		<h5 class="timespan">  <p class="timespanp"><?php echo $data['timespan'] ?></p>  </h5>
+
+		<h3 class="taskdescription">  <p class="taskdescriptionp"><?php echo $data['content'] ?></p>  </h3>
+
+	</div> -->
+
+<div class="schedulewrap">
 
 		<h1 class="headline">  </h1>
 
@@ -62,20 +69,25 @@
 		<div class="taskdescription">  </div>
 		
 		<?php foreach($data as $row){?>
-			<table>
-   				<tr>
-    			<td> <br> <?php echo $row->title;?></td>
-    			<td> <br> <?php echo $row->content;?></td>
-   				<td> <br> <?php echo $row->timespan;?></td>
-  				</tr>
-  			</table>
+			
+   			<div class="containerfordata">
+    		 <h1 class="headline"><b><?php echo $row->title;?> </b></h1></td>
+    		 <h5 class="timespan"><?php echo $row->timespan;?> </h5></td>
+   			 <h3 class="taskdescription"><?php echo $row->content;?> </h3></td>
+   			</div>
+  			
+  			</br>
+  			</br>
+  			</br>
+  			
  		 <?php }?>
 
 	</div>
 
-	<footer class="col-xs-12">
+
+	<footer class="myfooter col-xs-12 navbar-fixed-bottom">
 		<div class="contactbutton">
-			<p class="contactsup">Contact supervisor</p>
+			<p class="contactsup"><a href="<?php echo site_url('user/supage');?>" class="abutton abutton2 contactbutton">Contact Supervisor</a></p>
 		</div>
 	</footer>
 	
